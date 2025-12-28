@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("sss", $student_id, $name, $hashed);
 
         if ($stmt->execute()) {
-            header('Location: login.php');
+            header('Location: index.php');
             exit;
         } else {
             $errors = 'Error: ' . $stmt->error;
@@ -56,6 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Register</button>
 </form>
 
-<p>Already registered? <a href="login.php">Login here</a></p>
+<p>Already registered? <a href="index.php">Login here</a></p>
 </body>
 </html>
