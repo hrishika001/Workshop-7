@@ -2,7 +2,7 @@
 session_start();
 
 if (empty($_SESSION['logged_in'])) {
-    header('Location: login.php');
+    header('Location: index.php');
     exit;
 }
 
