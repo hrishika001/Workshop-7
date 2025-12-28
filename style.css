@@ -1,0 +1,214 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body - theme friendly */
+body {
+    min-height: 100vh;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main container card */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    max-width: 420px;
+    width: 100%;
+    padding: 24px 28px;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+}
+
+/* For dark theme, let PHP set body bg and color;
+   this card will still look cute on both. */
+body.dark .container {
+    background: rgba(34, 34, 34, 0.9);
+}
+
+/* Headings */
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.7);
+    transition: background 0.2s, transform 0.1s;
+}
+
+body.dark nav a {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+    transform: translateY(-1px);
+    background: #ffe4f3;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+body.dark input[type],
+body.dark select {
+    background: rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: inherit;
+}
+
+input:focus,
+select:focus {
+    border-color: #ff80bf;
+    box-shadow: 0 0 0 3px rgba(255, 128, 191, 0.25);
+}
+
+/* Radio buttons row */
+.radio-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+    font-size: 14px;
+}
+
+.radio-row label {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Buttons */
+button,
+input[type="submit"] {
+    margin-top: 8px;
+    padding: 9px 0;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff9ad5, #ff80bf);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(255, 128, 191, 0.35);
+    transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(255, 128, 191, 0.45);
+    opacity: 0.95;
+}
+
+button:active,
+input[type="submit"]:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(255, 128, 191, 0.35);
+}
+
+/* Messages */
+.error {
+    color: #ff4d6a;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.success {
+    color: #2e9f5b;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Small helper text / links */
+.helper {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 13px;
+}
+
+a.link {
+    color: #ff80bf;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a.link:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard text */
+p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Table (if you add grades later) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 6px;
+    text-align: left;
+}
+
+th {
+    background: rgba(255, 192, 225, 0.35);
+}
+
+/* Make dark-mode table nicer */
+body.dark th, body.dark td {
+    border-color: rgba(255, 255, 255, 0.18);
+}
+body.dark th {
+    background: rgba(255, 128, 191, 0.25);
+}
